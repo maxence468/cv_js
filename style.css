@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#cv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 0fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+}
+
+/* 1 (grid-row-start) : L'élément commence à la ligne de rangée 1.
+2 (grid-column-start) : L'élément commence à la colonne 2.
+3 (grid-row-end) : L'élément se termine à la ligne de rangée 2.
+4 (grid-column-end) : L'élément se termine à la colonne 3. */
+#title {
+    grid-area: 1 / 2 / 2 / 3;
+    padding-top: 30px;
+    text-align: center;
+}
+
+#subtitle {
+    grid-area: 2 / 2 / 3 / 3;
+    text-align: center;
+}
+
+#profile {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+#skills {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+#infos {
+    grid-area: 1 / 1 / 5 / 2;
+    max-width: 300px;
+}
+
+#presentation {
+    background-color: #0984e3;
+    border-radius: 50px 0 0 50px;
+    /* retour à la ligne automatique */
+    overflow-wrap: break-word;
+    padding: 30px;
+    min-height: 100%;
+}
