@@ -1,11 +1,27 @@
 {
     "nom": "Maxence Barthelemy",
     "poste": "Développeur web",
-    "profile": "profile",
-    "presentation": "aaadk,zkd,efne fehuhfeuhuhuhuefhaaadk,zkd,efne f efehuhfeuhuhuhuefhaaadk,zkefehuhfeuhuhuhuefh",
+    "experiences": [
+        {
+            "nomExperience": "Seca",
+            "description": "Aide maintenance site web"
+        },
+        {
+            "nomExperience": "EXO-PARTNERS",
+            "description": "T-SQL"
+        }
+    ],
+    "presentation": "Etudiant à l'ORT LYON en BACHELOR Concepteur developpeur web fullstack   ",
     "competences": [
         "HTML",
         "CSS",
         "JavaScript"
+    ],
+    "dateNaissance": [
+        {
+            "jour":12,
+            "mois":12,
+            "annee":2006
+        }
     ]
 }

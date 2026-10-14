@@ -1,14 +1,29 @@
+:root {
+    --bg: #74b9ff;
+    --electron: #0984e3
+}
+
 body {
     display: flex;
     justify-content: center;
+    font-size: 1rem;
+    margin: 0;
 }
 
 #cv {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 0fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 0px;
+    border: 2px solid black;
+    height: 100dvh;
+    padding: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    padding-right: 20px;
+    max-width: 50dvw;
+    box-sizing: border-box;
 }
 
 /* 1 (grid-row-start) : L'élément commence à la ligne de rangée 1.
@@ -16,34 +31,91 @@ body {
 3 (grid-row-end) : L'élément se termine à la ligne de rangée 2.
 4 (grid-column-end) : L'élément se termine à la colonne 3. */
 #title {
-    grid-area: 1 / 2 / 2 / 3;
-    padding-top: 30px;
+    grid-area: 1 / 2;
     text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15dvh;
 }
 
 #subtitle {
-    grid-area: 2 / 2 / 3 / 3;
-    text-align: center;
+    grid-area: 1 / 2;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 10dvh;
 }
 
-#profile {
-    grid-area: 3 / 2 / 4 / 3;
+#divExperiences {
+    grid-area: 2 / 2;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
 }
 
-#skills {
-    grid-area: 4 / 2 / 5 / 3;
+#divSkills {
+    grid-area: 3 / 2;
+}
+
+#divGithub {
+    grid-area: 3/1;
+    padding: 30px;
+
+}
+
+#divBackground {
+    grid-area: 1 / 1 / 4 / 1;
+    background-color: var(--bg);
+    z-index: -1;
+    border-radius: 0 40px 40px 0;
+}
+
+#divPhoto {
+    grid-area: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #infos {
-    grid-area: 1 / 1 / 5 / 2;
-    max-width: 300px;
+    grid-area: 2 / 1;
+    height: 100%;
+    max-width: 25dvw;
 }
 
 #presentation {
-    background-color: #0984e3;
-    border-radius: 50px 0 0 50px;
-    /* retour à la ligne automatique */
     overflow-wrap: break-word;
+    /* retour à la ligne automatique */
     padding: 30px;
     min-height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#imageGithub {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+a {
+    background-color: var(--electron);
+    color: white;
+    padding: 6px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.titreExperience {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+button {
+    height: 1rem;
 }
